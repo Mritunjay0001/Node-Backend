@@ -1,5 +1,8 @@
 const fs=require("fs");
 
+
+// Synchronush way ------------------------------
+
 // fs.mkdirSync("akshay")
 
 // fs.writeFileSync("bio.text", "im akshay singh rajput")
@@ -17,4 +20,6 @@ const fs=require("fs");
 
 // fs.rmdirSync("index")
 
-fs.writeFileSync("index.js")
+// fs.writeFileSync("index.js")
+
+
