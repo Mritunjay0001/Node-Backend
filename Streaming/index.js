@@ -5,16 +5,22 @@ const server= http.createServer();
 const rstream = fs.createReadStream("input.txt");
 
 server.on("request", (req, res)=>{
-    rstream.on("data",(chunkdata)=>{
-        res.write(chunkdata)
-    });
-    rstream.on("end",()=>{
-        res.end();
-    });
-    rstream.on("error",(err)=>{
-        console.log(err)
-        res.end("file not found");
-    });
+//     rstream.on("data",(chunkdata)=>{
+//         res.write(chunkdata)
+//     });
+//     rstream.on("end",()=>{
+//         res.end();
+//     });
+//     rstream.on("error",(err)=>{
+//         console.log(err)
+//         res.end("file not found");
+//     });
+
+
+
+// <----------This is shortest methoud to stream --------->
+
+rstream.pipe(res);
 })
 
 
